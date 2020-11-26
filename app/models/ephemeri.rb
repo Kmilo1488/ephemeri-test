@@ -1,0 +1,2 @@
+class Ephemeri < ApplicationRecord
+end
