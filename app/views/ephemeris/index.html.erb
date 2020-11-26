@@ -1,0 +1,33 @@
+
+<%= link_to 'Create Ephemeri', new_ephemeri_path %>
+
+
+<%= form_for :search, url: ephemeris_path, method: :get do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit "Search" %>
+<% end %>
+
+<table class="table table-striped table-hover">
+  <thead>
+  <tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Category
+    </th>
+    <th>
+      happened
+    </th>
+    <th>
+      Image
+    </th>
+    <th>
+      Option
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render @ephemeris %>
+  </tbody>
+</table>

@@ -1,0 +1,7 @@
+<%= form_with model: @ephemeri do |f| %>
+  <%= f.text_field :name %>
+  <%= f.date_field :happened %>
+  <%= f.select(:category, Ephemeri.categories.keys.map {|category| [category.titleize, category]})  %>
+  <%= f.file_field :image %>
+  <%= f.submit %>
+<% end %>

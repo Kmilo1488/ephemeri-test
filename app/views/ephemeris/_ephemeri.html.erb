@@ -1,0 +1,7 @@
+<tr>
+  <td><%= ephemeri.name %></td>
+  <td><%= ephemeri.category %></td>
+  <td><%= ephemeri.happened %></td>
+  <td><%= image_tag(ephemeri.image.variant(resize: "100x100"), size: '100') if ephemeri.image.attached?  %></td>
+  <td><%= link_to 'Edit', edit_ephemeri_path(ephemeri) %></td>
+</tr>
